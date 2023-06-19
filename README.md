@@ -1,10 +1,11 @@
 # Facebook - Auto Birthday Wishes (Tampermonkey script)
-Automate birthday greetings on Facebook with ease! This ultimate all-in-one Tampermonkey script is short of being a complete FBirthday butler, FB-Day buddy, and wishes automator for FB.
+Automate birthday greetings on Facebook with ease! This ultimate all-in-one Tampermonkey script is short of being a complete FBirthday butler, FB-Day buddy, and wishes automator for FB. 🍰🎈🎉
 
 **Author:** [Földesi Mihály | foldesistudio.hu](https://foldesistudio.hu)
 
 **Donate link:** [PayPal](https://www.paypal.com/donate/?business=47DJVT44PCDGW&no_recurring=0&currency_code=USD)
 
+**License:** [Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ## Requirements ##
 To use the "Facebook - Auto Birthday Wishes" Tampermonkey JS script, you need the following:
@@ -25,3 +26,12 @@ Feel free to explore and make the most of this all-in-one Tampermonkey script fo
 If you have any questions or issues, please don't hesitate to reach out for assistance.
 
 Happy automating and birthday wishing on Facebook!
+
+### Contributions ###
+
+Everyone is welcome to contribute to this project.
+Feel free to open an issue if you have question or found a bug.
+
+---
+
+Made with ♥ in Pécs 🇭🇺
