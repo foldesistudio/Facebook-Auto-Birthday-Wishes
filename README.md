@@ -13,8 +13,11 @@ To use the "Facebook - Auto Birthday Wishes" Tampermonkey JS script, you need th
 2. **[Open the Birthdays Calendar]** - Open your browser and navigate to the following URL: https://m.facebook.com/events/calendar/birthdays. Make sure you have the Developer Tools panel opened.
 3. **[Run the Script]** - The Tampermonkey script will automatically run on the Birthdays Calendar page. It will identify the upcoming birthdays and automate the process of sending birthday wishes.
 
-Alternatively, you can also use the provided batch, PowerShell, or shell script depending on your operating system. These scripts are pre-configured to open the Birthdays Calendar URL with Developer Tools.
+Alternatively, you can also use the provided batch, PowerShell, or shell script depending on your operating system. These scripts are pre-configured to open the Birthdays Calendar URL with Developer Tools. 
+### Automating the Execution ###
+Additionally, you have the flexibility to configure them as a cron job or scheduled task, allowing you to automate the process of opening the Birthdays Calendar with Developer Tools at specific intervals or times. This enables you to set up recurring automated actions for sending birthday wishes on Facebook without manual intervention.
 
+## Conclusion ##
 Feel free to explore and make the most of this all-in-one Tampermonkey script for automating birthday wishes on Facebook!
 
 If you have any questions or issues, please don't hesitate to reach out for assistance.
