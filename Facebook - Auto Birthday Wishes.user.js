@@ -108,7 +108,7 @@
 					console.log('All button presses completed!');
                     alert("Wishes has just sent to everyone!");
 				}
-			}, 5555 * index); // Módosíthatod az időzítést igényeid szerint
+			}, 5555 * index);
 		});
 	}
 
