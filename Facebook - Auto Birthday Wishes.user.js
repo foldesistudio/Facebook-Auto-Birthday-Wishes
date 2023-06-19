@@ -32,7 +32,7 @@
 			// HU: Nevek kiválasztása az első bDayCard-ban
 			// EN: Selection of names in the first bDayCard
 			const bDayCardLinks = bDayCards[0].querySelectorAll('._55ws._2vyq > a');
-			// HU: Bday kártyákon való iteráció | EN: Iteration on Bday cards
+			// HU: Bday kártyákon való iteráció
 			// EN: Iteration on Bday cards
 			bDayCardLinks.forEach((link, index) => { 
 				setTimeout(() => {
