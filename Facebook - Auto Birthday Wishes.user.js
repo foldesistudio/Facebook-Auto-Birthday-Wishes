@@ -8,8 +8,8 @@
 // @author       Földesi Mihály (FoldesiStudio.hu)
 // @match        https://m.facebook.com/events/calendar/birthdays*
 // @icon         https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico
-// @downloadURL
-// @updateURL
+// @downloadURL https://github.com/foldesistudio/Facebook-Auto-Birthday-Wishes/raw/main/Facebook%20-%20Auto%20Birthday%20Wishes.user.js
+// @updateURL https://github.com/foldesistudio/Facebook-Auto-Birthday-Wishes/raw/main/Facebook%20-%20Auto%20Birthday%20Wishes.user.js
 // @homepageURL         https://github.com/foldesistudio/Facebook-Auto-Birthday-Wishes
 // @supportURL          https://github.com/foldesistudio/Facebook-Auto-Birthday-Wishes/issues
 // @grant        none
@@ -18,52 +18,68 @@
 	'use strict';
 
 	function clickAllbDays() {
-		// A névvágás alapjának meghatározása
+		// HU: A névvágás alapjának meghatározása
+		// EN: Determination of the basis for name-cutting
 		let splitNamePart = ' ';
-		// Első '._55wo._55x2._56bf' div kiválasztása
+		// HU: Első '._55wo._55x2._56bf' div kiválasztása
+		// EN: Select first '._55wo._55x2._56bf' div
 		const bDayCards = document.querySelectorAll('div._55wo._55x2._56bf:not(:empty):has(form)');
-		// Textarea elemek kiválasztása
+		// HU: Textarea elemek kiválasztása
+		// EN: Selecting textarea elements
 		const textareas = document.querySelectorAll('textarea._5whq.input._52jc');
 
 		if (bDayCards) {
-			// Nevek kiválasztása az első bDayCard-ban
+			// HU: Nevek kiválasztása az első bDayCard-ban
+			// EN: Selection of names in the first bDayCard
 			const bDayCardLinks = bDayCards[0].querySelectorAll('._55ws._2vyq > a');
-			bDayCardLinks.forEach((link, index) => { // Bday kártyákon való iteráció
+			// HU: Bday kártyákon való iteráció | EN: Iteration on Bday cards
+			// EN: Iteration on Bday cards
+			bDayCardLinks.forEach((link, index) => { 
 				setTimeout(() => {
-					// A textarea elem kiválasztása ciklikus módon
+					// HU: A textarea elem kiválasztása ciklikus módon
+					// EN: Selecting a textarea element in a cyclical way
 					const textarea = link.nextElementSibling.querySelector('textarea._5whq');
 					if (textarea) {
-						// Az elem rendelkezik textarea elemmel, folytasd a feldolgozást
+						// HU: Az elem rendelkezik textarea elemmel? Ha igen, folytasd a feldolgozást!
+						// EN: Does the element have a textarea element? 
 						const nameElement = link.querySelector('p._52jh._5at0._592p');
 						const name = nameElement.textContent.trim();
 						// Név feldarabolása 'splitNamePart' alapján
 						const parts = name.split(splitNamePart);
 
-						// Keresztnév
+						// HU: Keresztnév
+						// EN: First name
 						const truncatedFirstName = parts[0].trim();
 
-						// Az üzenet szövege
-						const message = `${truncatedFirstName}, boldog születésnapot kívánok! 🍰`;
+						// HU: Az üzenet szövege
+						// EN: Text of the message
+						const message = `Happy Birthday, ${truncatedFirstName}! 🍰`;
 
-						// Az üzenet hozzáadása a textarea tartalmához
+						// HU: Az üzenet hozzáadása a textarea tartalmához
+						// EN: Add the message to the textarea content
 						textarea.value += '\n' + message;
 
-						// Input esemény kiváltása
+						// HU: Input esemény kiváltása
+						// EN: Trigger an input event
 						textarea.dispatchEvent(new Event('input', {
 							bubbles: true
 						}));
 
-						// Change esemény kiváltása
+						// HU: Change esemény kiváltása
+						// EN: Trigger a Change event
 						textarea.dispatchEvent(new Event('change', {
 							bubbles: true
 						}));
 
-						// Konzolüzenet
+						// HU: Konzolüzenet
+						// EN: Console message
 						console.log(message);
 
-						// Időzítés beállítása a sor sorszámától függően
+						// HU: Időzítés beállítása a sor sorszámától függően
+						// EN: Set timing depending on the line number
 						if (index === bDayCardLinks.length - 1) {
-							// Utolsó elem esetén végrehajtjuk a gombnyomást
+							// HU: Utolsó elem esetén végrehajtjuk a gombnyomást
+							// EN: For the last item, we will perform the button press
 							postButtonClick();
 						}
 
@@ -78,17 +94,19 @@
 
 
 	function postButtonClick() {
-		// Küldés - "Post" gomb kiválasztása és kattintás minden elemnél külön-külön
+		// HU: Küldés - "Post" gomb kiválasztása és kattintás minden elemnél külön-külön
+		// EN: Send - Select "Post" button and click on each item separately
 		const postButtons = document.querySelectorAll('button[type="submit"]');
 
 		postButtons.forEach((button, index) => {
 			setTimeout(() => {
 				button.click();
-				console.log('Gombnyomás végrehajtva');
+				console.log('Button press executed');
 				if (index === postButtons.length - 1) {
-					// Utolsó gombnyomás után vége a folyamatnak
-					console.log('Az összes gombnyomás végrehajtva');
-                    alert("Mindenki fel lett köszöntve!");
+					// HU: Utolsó gombnyomás után vége a folyamatnak
+					// EN: After the last button press, the process is over
+					console.log('All button presses completed!');
+                    alert("Wishes has just sent to everyone!");
 				}
 			}, 5555 * index); // Módosíthatod az időzítést igényeid szerint
 		});
