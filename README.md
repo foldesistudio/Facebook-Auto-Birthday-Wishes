@@ -3,6 +3,8 @@ Automate birthday greetings on Facebook with ease! This ultimate all-in-one Tamp
 
 **Author:** [Földesi Mihály | foldesistudio.hu](https://foldesistudio.hu)
 
+**Donate link:** [PayPal](https://www.paypal.com/donate/?business=47DJVT44PCDGW&no_recurring=0&currency_code=USD)
+
 
 ## Requirements ##
 To use the "Facebook - Auto Birthday Wishes" Tampermonkey JS script, you need the following:
